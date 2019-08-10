@@ -1,16 +1,12 @@
-# PS1_De-Dither
-cr4zymanz0r's experimental PS1 dither disable patch.
+# PS1 De-Ditherer(er)
+Patcher adapted from cr4zymanz0r's experimental PS1 dither disable patch. It will take a .bin or .iso file, and turn off dithering. In games which rely mostly on sprites, this can make color blending look better. In 3D games, turning off dithering can sometimes cause hard color banding.
 
-Notes:
+# Usage
+Open a terminal
+```sh
+git clone https://github.com/kashaiahyah85/PS1_De-Dither.git
+cd PS1_De-Dither
+./de-dither </Full/Path/To/BIN/Or/ISO>
+```
 
-1.) This will improve the visuals on some games that use dithering (noteably 2D games that didn't need dithering for any sensible reason), but it may cause sever color banding on some 3D games when it is removed.
-
-2.) This has not be super widely tested, but I haven't heard of any issues reported by people beyond user error.
-
-Instructions: 
-
-1.) Drag a PS1 ISO onto "Patch_PS1_dither.bat". (the actual image file itself such as .iso or .bin, not a .cue file)
-
-2.) You will now have a patched version called "PatchedISO.bin". Rename it to whatever you like or the same as your original ISO.
-
-a.) This should work with sed in Linux if you 'convert' the main command in the batch file.
+You will end up with a patched file and a backup in the location of the original file.
