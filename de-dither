@@ -1,0 +1,14 @@
+#! /usr/bin/env sh
+
+echo "\ncr4zymanz0r's experimental PS1 dither disable patch.\n\t
+Usage: ./Patch_PS1_dither <image>.\n\nThis will improve the visuals on some sprite-based games, but it may\ncause severe color banding on some 3D games.\n\nThis isn't guaranteed to work by any means, but give it a shot.\n"
+
+if [ -z "$1" ]; then
+    echo "Error: No PS1 image file provided.\nRun this script again with an image, such as .iso or .bin, as an argument."
+    exit 1
+else
+    filename=$(basename "$1")
+    echo "Patching image:\t"$filename
+    LC_CTYPE=C && LANG=C && sed -i'.original' -e "s/\x00\xE1\(.\)\x3C\x00\x02/\x00\xE1\1\x3C\x00\x00/g" "$1"
+    exit 0
+fi
