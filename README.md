@@ -13,4 +13,7 @@ Instructions:
 
 2.) You will now have a patched version called "PatchedISO.bin". Rename it to whatever you like or the same as your original ISO.
 
-a.) This should work with sed in Linux if you 'convert' the main command in the batch file.
+### Tools included that make this possible:
+
+* sed - https://www.gnu.org/software/sed/
+* ECCScan - https://github.com/Terraonion-dev/ECCScan
